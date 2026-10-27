@@ -1,0 +1,23 @@
+{
+  "id": "de.brim.ai",
+  "name": "KI-Assistent",
+  "version": "1.0.0",
+  "entry": "BrimAi.exe",
+  "api": "1",
+  "slots": ["compact.leading", "compact.trailing"],
+  "permissions": ["network"],
+  "widgets": [
+    {"id": "assistant", "name": "KI-Assistent", "description": "Fragen stellen, Text aus der Zwischenablage erklären, zusammenfassen oder übersetzen; zeigt die letzte Antwort", "glyph": "", "sizes": ["large", "medium", "wide", "full"]},
+    {"id": "apps", "name": "KI-Apps", "description": "Claude, ChatGPT, Copilot und Perplexity mit einem Klick öffnen", "glyph": "", "sizes": ["medium", "small", "wide"]}
+  ],
+  "settings": [
+    {"key": "engine", "type": "string", "label": "KI für Antworten in der Notch: auto, claude, ollama, lmstudio, gemini oder aus", "default": "auto"},
+    {"key": "model", "type": "string", "label": "Modell (leer = Standard der KI, z. B. sonnet oder llama3.2)", "default": ""},
+    {"key": "app", "type": "string", "label": "App zum Weiterfragen: auto, Claude, ChatGPT, Copilot oder Perplexity", "default": "auto"},
+    {"key": "handoffSend", "type": "bool", "label": "Frage in der App gleich abschicken (sonst nur einfügen)", "default": false},
+    {"key": "hotkey", "type": "string", "label": "Tastenkürzel für eine Frage (leer = aus)", "default": "Ctrl+Alt+K"},
+    {"key": "instructions", "type": "string", "label": "Zusätzliche Anweisung an die KI, z. B. „Duze mich“", "default": ""},
+    {"key": "ollamaUrl", "type": "string", "label": "Adresse von Ollama", "default": "http://127.0.0.1:11434"},
+    {"key": "lmstudioUrl", "type": "string", "label": "Adresse von LM Studio oder einem anderen OpenAI-kompatiblen Server", "default": "http://127.0.0.1:1234"}
+  ]
+}
