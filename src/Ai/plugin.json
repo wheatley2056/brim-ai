@@ -1,13 +1,13 @@
 {
   "id": "de.brim.ai",
   "name": "KI-Assistent",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "entry": "BrimAi.exe",
   "api": "1",
   "slots": ["compact.leading", "compact.trailing"],
   "permissions": ["network"],
   "widgets": [
-    {"id": "assistant", "name": "KI-Assistent", "description": "Fragen stellen, Text aus der Zwischenablage erklären, zusammenfassen oder übersetzen; zeigt die letzte Antwort", "glyph": "", "sizes": ["large", "medium", "wide", "full"]},
+    {"id": "assistant", "name": "KI-Assistent", "description": "Fragen stellen, Zwischenablage erklären oder übersetzen, letzte Antwort", "glyph": "", "sizes": ["large", "medium", "wide", "full"]},
     {"id": "apps", "name": "KI-Apps", "description": "Claude, ChatGPT, Copilot und Perplexity mit einem Klick öffnen", "glyph": "", "sizes": ["medium", "small", "wide"]}
   ],
   "settings": [
