@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+    KI-Assistent für Brim: Fragen per Tastenkürzel oder aus der Notch, Antworten in der Notch und als Widget. Nutzt die
+    KI, die schon auf dem Rechner ist: Claude Code, Gemini CLI, Ollama oder LM Studio für Antworten, Claude Desktop,
+    ChatGPT, Copilot oder Perplexity zum Weiterfragen. Build-Ausgabe ist der fertige Plugin-Ordner.
+  -->
+  <PropertyGroup>
+    <!-- Kein Konsolenfenster, wenn Brim das Plugin startet; stdout/stderr landen trotzdem im Plugin-Log. -->
+    <OutputType>WinExe</OutputType>
+    <!-- Ohne Windows-SDK-Version: das Plugin braucht keine WinRT-Projektion. -->
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <AssemblyName>BrimAi</AssemblyName>
+    <RootNamespace>Brim.Ai</RootNamespace>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <!-- Eingabefeld mit Platzhaltertext (Common Controls 6) und scharf auf jedem Monitor. -->
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(BrimRoot)\src\Brim.Sdk\Brim.Sdk.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="plugin.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>
