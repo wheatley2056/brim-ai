@@ -16,8 +16,11 @@
   <ItemGroup>
     <!-- Alles außer Program.cs und dem Windows-Ordner ist plattformunabhängig. -->
     <Compile Include="..\..\src\Ai\*.cs" Exclude="..\..\src\Ai\Program.cs" LinkBase="Ai" />
+    <None Include="..\..\src\Ai\plugin.json" Link="Manifest\plugin.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(BrimRoot)\src\Brim.Sdk\Brim.Sdk.csproj" />
+    <!-- Prüft plugin.json mit denselben Regeln, mit denen Brim es lädt. -->
+    <ProjectReference Include="$(BrimRoot)\src\Brim.Plugins\Brim.Plugins.csproj" />
   </ItemGroup>
 </Project>
